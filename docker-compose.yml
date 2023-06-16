@@ -1,11 +1,11 @@
 version: "3.9"
 
 services:
-  ani-sensei-fileshare-:
+  anisenseifileshare:
     build:
       context: "."
       dockerfile: Dockerfile
-    container_name: ani-sensei-fileshare-
+    container_name: anisenseifileshare
     environment:
       - APP_ID=${APP_ID}
       - API_HASH=${API_HASH}
