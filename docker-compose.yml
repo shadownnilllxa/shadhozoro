@@ -1,11 +1,7 @@
-version: "3.9"
-
+version: "3.10"
 services:
-  anisenseifileshare:
-    build:
-      context: "."
-      dockerfile: Dockerfile
-    container_name: anisenseifileshare
+  worker:
+    build: .
     environment:
       - APP_ID=${APP_ID}
       - API_HASH=${API_HASH}
@@ -20,7 +16,3 @@ services:
       - ADMINS=${ADMINS}
       - PROTECT_CONTENT=${PROTECT_CONTENT}
 
-    volumes:
-      - "/codebase:/codebase"
-      - "/storage:/storage"
-    restart: always
