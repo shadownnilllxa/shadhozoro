@@ -1,17 +1,19 @@
 version: "3.9"
 
 services:
-  tgvid-comp-bot:
+  ani-sensei-fileshare-:
     build:
       context: "."
       dockerfile: Dockerfile
-    container_name: tgvid-comp
+    container_name: ani-sensei-fileshare-
     environment:
       - APP_ID=${APP_ID}
       - API_HASH=${API_HASH}
-      - BOT_TOKEN=${BOT_TOKEN}
-      - OWNER=${OWNER}
-      - THUMBNAIL=${THUMBNAIL}
+      - TG_BOT_TOKEN=${TG_BOT_TOKEN}
+      - OWNER_ID=${OWNER_ID}
+      - DATABASE_URL=${DATABASE_URL}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - CHANNEL_ID=${CHANNEL_ID}
     volumes:
       - "/codebase:/codebase"
       - "/storage:/storage"
