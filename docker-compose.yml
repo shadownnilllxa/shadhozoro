@@ -15,4 +15,7 @@ services:
       - FORCE_SUB_MESSAGE=${FORCE_SUB_MESSAGE}
       - ADMINS=${ADMINS}
       - PROTECT_CONTENT=${PROTECT_CONTENT}
-
+volumes:
+      - "/codebase:/codebase"
+      - "/storage:/storage"
+    restart: always
